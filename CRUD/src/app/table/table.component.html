@@ -1,0 +1,30 @@
+<table id="main_table">
+    <thead>
+        <th name="id">Emp ID</th>
+        <th name="firstname">Emp  First name</th>
+        <th name="middle_name">Emp Middle Name</th>
+        <th name="lastname">Emp Last Name</th>
+        <th name="contact">Emp Mob num</th>
+        <th name="role">Emp Role</th>
+        <th name="address">Emp Address</th>
+        <th name="edit">CHANGE</th>
+    </thead>
+    <tbody >
+        <tr *ngFor="let user of all_Users">
+            <td>{{user.user_id}}</td>
+            <td> {{user.firstname}} </td>
+            <td> {{user.middle_name}} </td>
+            <td> {{user.lastname}} </td>
+            <td> {{user.contact}} </td>
+            <td>  {{user.role}} </td>
+            <td> {{user.address}} </td>
+            <td>
+                <button mat-raised-button color="accent" id="edit_btn" (click)="enable_update(user.contact)">Edit</button>
+                <button mat-raised-button color="primary" id="delete_btn" (click)="delete_user(user.contact)" >Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button mat-raised-button color = "primary" id="add_row_btn" (click)="enable_form()">Add Row</button>
+<app-form *ngIf="add_row" [update_check]="edit_contact" (parent_function)="parent_function($event)" (load_data_in_app)="load_data_from_form($event)"></app-form>
+<app-edit-form [update_check]="edit_contact" *ngIf="update_row" (parent_function)="parent_function($event)" (load_data_in_app)="load_data_from_form($event)" ></app-edit-form>

@@ -1,0 +1,19 @@
+label{
+    display: block;
+}
+#edit_form{
+    background-color: rgb(23, 22, 22);
+    width: 15vw;
+    height: 40vh;
+    color: white;
+    padding-top: 1vh;
+    padding-left: 2vw;
+    position: absolute;
+    left: 44vw;
+    margin-top: 2vh;
+    border-radius: 10px;
+
+}
+#form_btn{
+    margin-top: 1vh;
+}

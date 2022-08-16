@@ -1,0 +1,21 @@
+table{
+    width: 100vw;
+    border: solid black;
+    border-left: solid grey;
+}
+tr{
+    border-bottom:solid black ;
+}
+td{
+    text-align: center;
+    padding: 1vh;
+    border-bottom: solid grey;
+}
+button{
+    margin-left: 1vw;
+}
+#add_row_btn{
+    position: absolute;
+    left: 45vw;
+    margin-top: 1vh;
+}
